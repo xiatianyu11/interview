@@ -37,3 +37,12 @@ dirty reads: get uncommitted data of another     transaction
 Non-repeatable reads: same tranaction same query, get different data
 Phantom reads: one transaction update all records in one table, another transaction insert a new row, 
                the the first transaction will find one record is not updated
+               
+               
+5.事务特性（4种）
+1）all of statement always success or fail
+2）a transaction can bring the data from one valid state to another
+3）one executing transaction cannot be impacted by other transaction
+4）once transaction committed, the data is persisted into database
+
+
