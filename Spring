@@ -25,3 +25,15 @@
 7）propagation_nested: different the propagation_requires_new, if parent transaction commit/rollback, 
    the transaction will commit/rollback. by the way, the transaction will rollback to savepoint if it is fail.
    the sub-transaction rollbackk will not impact the commit of parent transaction.
+
+4.Spring事务的隔离级别
+1）isolation_default: execute with database transaction isolation
+2）isolation_read_uncommitted: other transaction can see the uncommitted data in current transaction.
+3）isolation_read_committed: another transaction can read the commtted data in current transaction.
+4）isolation_repeatable_read: read same data for same query in same transaction.
+5）isolation_serializable: avoid all
+
+dirty reads: get uncommitted data of another     transaction
+Non-repeatable reads: same tranaction same query, get different data
+Phantom reads: one transaction update all records in one table, another transaction insert a new row, 
+               the the first transaction will find one record is not updated
