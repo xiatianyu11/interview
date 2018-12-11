@@ -12,5 +12,5 @@
       spring container will create the dao, and inject it into service
   container + reflection + configrure file
 2）AOP
-  eg: implement the logic before, after, throw-after, around the method is executed. such, logs, cache, transaction with automatic proxy.
+  eg: implement the logic before, after, throw-after, around the method execution with automatic proxy. such, logs, cache, transaction .
   
