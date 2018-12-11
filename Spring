@@ -1,0 +1,16 @@
+1.SpringMVC 执行流程？
+1）DispatcherServlet 捕获用户请求
+2）根据url，利用HandlerMapping找到Handler
+3）执行Handler，返回ModeAndView
+4）DispatcherServlet根据返回的ModeAndView,选择合适的ViewResolver
+5）渲染
+
+2.Spring是什么？
+  是JEE应用程序框架，是轻量级的IOC和AOP的容器框架，主要是对JavaBean的生命周期管理的轻量级框架，能和其他框架(struts,ibatis)一起使用，也能单独使用
+1）IOC(Inversion of control)或者DI(dependency injection)
+  eg: my service need dao, the service need to create dao? but IOC, 
+      spring container will create the dao, and inject it into service
+  container + reflection + configrure file
+2）AOP
+  eg: implement the logic before, after, throw-after, around the method is executed. such, logs, cache, transaction with automatic proxy.
+  
