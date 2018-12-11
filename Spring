@@ -15,3 +15,13 @@
   eg: implement the logic before, after, throw-after, around the method execution with automatic proxy. 
   such, logs, cache, transaction .
   
+3.事务的传播特性(propagation)
+1）propagation_required: if there is a transaction, then use existing one, otherwise create a new one.
+2）propagation_supports: if there is a transaction, then execute with transaction, otherwise execute without transaction.
+3）propagation_mondatory: if there is not a transaction, throw an exception.
+4）propagation_requires_new: always create a new transaction
+5）propagation_not_supported: always execute without transaction, suspend the exsiting transaction
+6）propagation_never: always execute without transaction, throw an exception if there is a transaction
+7）propagation_nested: different the propagation_requires_new, if parent transaction commit/rollback, 
+   the transaction will commit/rollback. by the way, the transaction will rollback to savepoint if it is fail.
+   the sub-transaction rollbackk will not impact the commit of parent transaction.
